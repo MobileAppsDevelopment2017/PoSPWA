@@ -1,0 +1,82 @@
+<div data-hash="viewFullRecipe" class="swiper-slide">
+
+
+
+
+
+
+    <div class="section no-pad-bot">
+
+
+
+        <h3 class="header center teal-text text-lighten-1">View Full Recipe</h3>
+        <div class="row">
+            <div class="col s12">
+
+                <div id="stepsContent"></div>
+            </div>
+
+
+
+
+
+
+            <br><br>
+
+        </div>
+
+
+        <!--close root-->
+        </section>
+
+
+
+
+
+
+
+
+
+
+    </div>
+    <!--Close Steps Menu Group 3-->
+
+
+    <script>
+        //Need to put the Swiper into the dynamicaly generated content!
+        //initialize swiper SPA control for this content
+        var swiper = new Swiper('.swiper-container', {
+            // If we need pagination
+            pagination: '.swiper-pagination',
+            paginationClickable: true,
+            spaceBetween: 0,
+
+
+            onInit: function(swiper) {
+
+              $('.progress').css({"visibility": "hidden"});
+              $('.progressWrapper').css({"visibility": "hidden"});
+
+            },
+
+
+
+
+            // Add one more handler for this event
+            onSlideChangeEnd: function(swiper) {
+
+
+            },
+
+            paginationBulletRender: function(index, className) {
+                //return '<span class="' + className + '">' + (index + 1) + '</span>';
+                return '<span class="' + className + '"></span>';
+            }
+        });
+        //swiper.update();
+        //Initial animation
+    </script>
+    <script src="js/getFullRecipe.js"></script>
+    <script>
+        getFullRecipe();
+    </script>

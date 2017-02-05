@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<!--SPA Application Shell TESTBED-->
+<html lang="en">
+
+<head>
+  <!--prevent the browser from making ico requests-->
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+  <link rel="manifest" href="manifest.json">
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+  <title>Mobile Apps Development: A Pinch of Salt App</title>
+
+  <!-- CSS-->
+  <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection" />
+
+
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+
+  <!--swiper integration-->
+  <link rel="stylesheet" href="css/swiper.min.css">
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+
+  <script src="js/jquery-2.1.1.min.js"></script>
+
+  <script src="js/swiper.jquery.min.js" async></script>
+
+  <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+
+</head>
+
+<body>
+
+
+
+    <!--top banner-->
+    <main>
+        <div class="section no-pad-bot" id="index-banner">
+            <div class="container">
+
+                <nav class="black">
+                    <div class="nav-wrapper">
+
+
+                        <ul class="right hide-on-med-and-down">
+
+                            <li><a class="waves-effect waves-blue" href="#">Help</a></li>
+
+
+
+                        </ul>
+
+
+                        <ul class="left hide-on-med-and-down">
+                            <li><a class="waves-effect waves-blue _login" href="#">Login </a></li>
+                            <li><a class="waves-effect waves-blue _viewAllRecipes" href="#">Recipies</a></li>
+
+                            <li><a class="waves-effect waves-blue" href="#">Help </a></li>
+
+
+                        </ul>
+
+
+
+                        <ul id="slide-out" class="side-nav">
+
+                            <li class="logo headerLogo2"></li>
+                            <li><a class="waves-effect waves-blue modal-trigger" href="#loginmodal">Login </a></li>
+
+                            <li><a class="waves-effect waves-blue _viewAllRecipes" href="#">Recipies</a></li>
+
+                            <li><a class="waves-effect waves-blue" href="#">Help</a></li>
+
+
+                        </ul>
+
+
+
+                        <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+                    </div>
+                </nav>
+
+
+                <h1 class="header center">&nbsp;</h1>
+
+            </div>
+        </div>
+
+    </main>
+
+    <!--card panel section-->
+    <section class="root card-panel car-panelTopHeader">
+
+        <div class="row center mainLogo"></div>
+
+
+
+
+        <div class="progress">
+            <div class="indeterminate"></div>
+        </div>
+
+
+
+        <!-- Swiper controls SPA -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper contentRoot">
+
+
+
+                <!--tmp Partial View HERE-->
+
+                <div data-hash="addRecipeStep" class="swiper-slide">
+
+
+                    <div class="section no-pad-bot">
+
+                        <!--Row left-->
+                        <div class="row center">
+                            <div class="col s6">
+                                <h3 class="header center teal-text text-lighten-1">Add Recipe Step</h3>
+
+                                <form id="addRecipeStep" class="addRecipeStep" enctype="multipart/form-data">
+
+                                    <div class="input-field col s12 ">
+                                        <div class="row center"><i class="material-icons md-36 teal-text text-lighten-1">create</i></div>
+
+                                        <textarea placeholder="Add Recipe Step" id="steps" name="copy" class="materialize-textarea" tabindex="1" autofocus></textarea>
+                                        <label for="steps"></label>
+                                    </div>
+
+                                    <br>
+
+                                    <div class="col s12 file-field center">
+                                        <div class="btn">
+                                            <span>Take Picture</span>
+                                            <input id="PhotoPicker" type="file" name="MAD17Steps[path]" class="path" accept="image/*;capture=camera" />
+                                        </div>
+                                        <div class="file-path-wrapper">
+                                            <!--<input class="file-path validate" type="text">-->
+                                        </div>
+
+
+
+
+
+
+                                        <div class="col s12 file-field input-field">
+
+                                            <div class="center red-text" style="font-size:1.1em; color:red" id="message2"></div>
+
+                                        </div>
+
+                                    </div>
+
+
+
+                                    <div class="row center">
+
+                                        <div class="col s12">
+                                            <button class="btn-large waves-effect waves-blue z-depth-3 waves-effect teal text-lighten-1 white-text btn-flat createRecipe " type="submit">Add Step
+                                  <i class="mdi-content-send right"></i>
+                                </button>
+
+                                            <p class="center">
+                                                Recipe Image Preview Area
+                                            </p>
+                                            <canvas id="PhotoEdit">
+                <p><font color="white">This browser does not support the required features.
+                Please try
+                <a href="http://windows.microsoft.com/en-us/internet-explorer/products/ie/home">Internet Explorer 10</a>,
+                or a current version of
+                <a href="http://www.mozilla.org/en-US/firefox/new/">Firefox</a>,
+                <a href="http://www.google.com/chrome">Chrome</a>, or
+                <a href="http://www.apple.com/safari/">Safari</a>.</font></p>
+                </canvas>
+                                        </div>
+                                    </div>
+
+
+
+
+
+                                    <div class="input-field col s12 m12 ">
+                                        <span id="msg" class="red-text"></span>
+                                    </div>
+
+
+
+                                </form>
+
+                            </div>
+                            <!--close left col-->
+
+                            <div class="col s6 leftcolborder">
+
+                                <h3 class="header center teal-text text-lighten-1">Your Steps</h3>
+
+                                <div id="stepsContent"></div>
+
+                            </div>
+
+                        </div>
+                        <!--close right col-->
+
+
+
+                    </div>
+                    <!--close row-->
+
+
+
+
+
+
+                    <!--close root-->
+                    </section>
+
+
+
+
+
+
+
+
+
+
+                </div>
+
+
+
+                <script>
+                    //Need to put the Swiper into the dynamicaly generated content!
+                    //initialize swiper SPA control for this content
+                    var swiper = new Swiper('.swiper-container', {
+                        // If we need pagination
+                        pagination: '.swiper-pagination',
+                        paginationClickable: true,
+                        spaceBetween: 0,
+
+
+                        onInit: function(swiper) {
+
+                            $('.progress').css({
+                                "visibility": "hidden"
+                            });
+                            $('.progressWrapper').css({
+                                "visibility": "hidden"
+                            });
+
+                        },
+
+
+
+
+                        // Add one more handler for this event
+                        onSlideChangeEnd: function(swiper) {
+
+
+                        },
+
+                        paginationBulletRender: function(index, className) {
+                            //return '<span class="' + className + '">' + (index + 1) + '</span>';
+                            return '<span class="' + className + '"></span>';
+                        }
+                    });
+                    //swiper.update();
+                    //Initial animation
+                </script>
+
+
+                <!--process the image http://chariotsolutions.com/blog/post/take-and-manipulate-photo-with-web-page/-->
+                <script type="text/javascript">
+                    // Wrapper around MPL-licensed http://www.nihilogic.dk/labs/binaryajax/binaryajax.js
+                    // to support JavaScript typed arrays since binary strings are not supported in IE 10
+
+                    var createBinaryFile = function(uintArray) {
+                        var data = new Uint8Array(uintArray);
+                        var file = new BinaryFile(data);
+                        file.getByteAt = function(iOffset) {
+                            return data[iOffset];
+                        };
+                        file.getBytesAt = function(iOffset, iLength) {
+                            var aBytes = [];
+                            for (var i = 0; i < iLength; i++) {
+                                aBytes[i] = data[iOffset + i];
+                            }
+                            return aBytes;
+                        };
+                        file.getLength = function() {
+                            return data.length;
+                        };
+                        return file;
+                    }; //close createBinaryFile
+
+
+                    // The actual page logic
+                    //$(function() {
+                    //$(document).on('ready', function() {
+
+
+                    $('#PhotoButton').click(function() {
+                        $('#PhotoPicker').trigger('click');
+                        return false;
+                    });
+
+
+
+                    $('#PhotoPicker').on('change', function(e) {
+                        e.preventDefault();
+                        $("div#message2").append("Picture Preview - Please Check Your Image Before Creating Step");
+                        if (this.files.length === 0) return;
+                        var imageFile = this.files[0];
+                        var img = new Image();
+                        var url = window.URL ? window.URL : window.webkitURL;
+                        img.src = url.createObjectURL(imageFile);
+                        img.onload = function(e) {
+                            url.revokeObjectURL(this.src);
+                            var width;
+                            var height;
+
+                            var binaryReader = new FileReader();
+
+                            binaryReader.onloadend = function(d) {
+                                var exif, transform = "none";
+                                exif = EXIF.readFromBinaryFile(createBinaryFile(d.target.result));
+                                if (exif.Orientation === 8) {
+                                    width = img.height;
+                                    height = img.width;
+                                    transform = "left";
+                                } else if (exif.Orientation === 6) {
+                                    width = img.height;
+                                    height = img.width;
+                                    transform = "right";
+                                } else if (exif.Orientation === 1) {
+                                    width = img.width;
+                                    height = img.height;
+                                } else if (exif.Orientation === 3) {
+                                    width = img.width;
+                                    height = img.height;
+                                    transform = "flip";
+                                } else {
+                                    width = img.width;
+                                    height = img.height;
+                                }
+
+                                //we can change the width and height here
+
+                                var MAX_WIDTH = 600;
+                                var MAX_HEIGHT = 600;
+
+
+                                if (width / MAX_WIDTH > height / MAX_HEIGHT) {
+                                    if (width > MAX_WIDTH) {
+                                        height *= MAX_WIDTH / width;
+                                        width = MAX_WIDTH;
+                                    }
+                                } else {
+                                    if (height > MAX_HEIGHT) {
+                                        width *= MAX_HEIGHT / height;
+                                        height = MAX_HEIGHT;
+                                    }
+                                }
+
+
+                                var canvas = $('#PhotoEdit')[0];
+                                canvas.width = width;
+                                canvas.height = height;
+                                var ctx = canvas.getContext("2d");
+                                ctx.fillStyle = 'white';
+                                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                                if (transform === 'left') {
+                                    ctx.setTransform(0, -1, 1, 0, 0, height);
+                                    ctx.drawImage(img, 0, 0, height, width);
+                                } else if (transform === 'right') {
+                                    ctx.setTransform(0, 1, -1, 0, width, 0);
+                                    ctx.drawImage(img, 0, 0, height, width);
+                                } else if (transform === 'flip') {
+                                    ctx.setTransform(1, 0, 0, -1, 0, height);
+                                    ctx.drawImage(img, 0, 0, width, height);
+                                } else {
+                                    ctx.setTransform(1, 0, 0, 1, 0, 0);
+                                    ctx.drawImage(img, 0, 0, width, height);
+                                }
+                                ctx.setTransform(1, 0, 0, 1, 0, 0);
+                            };
+                            binaryReader.readAsArrayBuffer(imageFile);
+                        };
+                    });
+
+
+                    //});
+                    //});
+                </script>
+
+
+
+
+
+
+
+
+
+
+    </div>
+    <!--close swiper wrapper and contentRoot-->
+    </div>
+    <!--close swiper conatiner-->
+
+
+
+
+
+
+    <!--  Scripts - core and bespoke js that controls every aspect of the app-->
+
+
+    <script src="js/fastclick.js"></script>
+
+
+    <script src="js/materialize.min.js"></script>
+    <script src="js/masonry.pkgd.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+
+    <script src="js/PartialViewControl.js"></script>
+    <script src="js/changeAppPage.js"></script>
+
+
+
+    <script src="js/swipeFlash.js"></script>
+
+
+    <script src="js/jquery.browser.min.js"></script>
+
+    <script src="js/login.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/createRecipe.js"></script>
+    <script src="js/createStep.js"></script>
+    <script src="js/getCreatedSteps.js"></script>
+
+    <script src="lib/exif.js" type="text/javascript"></script>
+    <script src="lib/binaryajax.js" type="text/javascript"></script>
+
+
+
+
+
+    <!--variable store - gets around the need to store variables as window objects-->
+    <div class="itemidstore" _itemidstore=''></div>
+
+    <script>
+    /*
+    if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+    navigator.serviceWorker.register('service-worker.js', {
+        scope: "/MAD/PoS/"
+    }).then(function(registration) {
+        // Registration was successful
+        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        // Trim the caches on load
+        navigator.serviceWorker.controller && navigator.serviceWorker.controller.postMessage({
+            command: "trimCaches"
+        });
+    }).catch(function(err) {
+        // registration failed :(
+        console.log('ServiceWorker registration failed: ', err);
+    });
+    });
+    }
+    */
+    </script>
+
+</body>
+
+</html>

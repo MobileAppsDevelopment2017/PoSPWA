@@ -1,0 +1,85 @@
+<div data-hash="dashboard" class="swiper-slide">
+
+
+
+
+
+
+    <div class="section no-pad-bot">
+
+
+
+
+        <h1 class="center libquestLogoText orange-text">Recipe Creator App</h1>
+
+
+        <h3 class="header center teal-text text-lighten-1">Dasboard</h3>
+        <div class="row center">
+
+            <br>
+        </div>
+
+        <div class="row">
+            <div class="col s12">
+                <div class="card card teal lighten-2">
+                    <div class="card-content white-text">
+                        <span class="card-title">Create A New Recipe</span>
+                        <p>Have you device ready to take pictures as you prepare the recipe!</p>
+                    </div>
+                    <div class="card-action">
+                        <a class="createRecipeBtn">Create New Recipe</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <br><br>
+
+    </div>
+
+
+    <!--close root-->
+    </section>
+
+
+</div>
+
+
+
+<script>
+    //Need to put the Swiper into the dynamicaly generated content!
+    //initialize swiper SPA control for this content
+    var swiper = new Swiper('.swiper-container', {
+        // If we need pagination
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        spaceBetween: 0,
+
+
+        onInit: function(swiper) {
+          $('.progress').css({"visibility": "hidden"});
+          $('.progressWrapper').css({"visibility": "hidden"});
+
+        },
+
+
+
+
+        // Add one more handler for this event
+        onSlideChangeEnd: function(swiper) {
+
+
+        },
+
+        paginationBulletRender: function(index, className) {
+            //return '<span class="' + className + '">' + (index + 1) + '</span>';
+            return '<span class="' + className + '"></span>';
+        }
+    });
+    //swiper.update();
+    //Initial animation
+</script>

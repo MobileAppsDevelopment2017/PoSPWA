@@ -1,0 +1,170 @@
+
+
+
+
+<div data-hash="register" class="swiper-slide">
+
+
+
+
+
+
+    <div class="section no-pad-bot">
+
+
+
+
+        <h1 class="center logoText orange-text">Recipe Creator App [Service Worker Version]</h1>
+
+
+        <h3 class="header center teal-text text-lighten-1">Register and Get Cookin'</h3>
+        <div class="row center">
+
+            <br>
+        </div>
+
+
+
+
+
+        <form id="register">
+
+
+            <div class="row center">
+
+
+                <div class="input-field col s6 ">
+                    <div class="row center"><i class="material-icons md-36 teal-lighten-1">mood</i></div>
+                    <input placeholder="enter your first name" id="fname" name="fname" type="text" class="validate" />
+                    <label for="fname"></label>
+                </div>
+
+                <div class="input-field col s6  ">
+                    <div class="row center"><i class="material-icons md-36 teal-lighten-1">mood</i></div>
+                    <input placeholder="enter your last name" id="lname" name="lname" type="text" class="validate" />
+                    <label for="fname"></label>
+                </div>
+
+            </div>
+
+
+            <div class="row center">
+
+
+
+                <div class="input-field col s6  ">
+
+                    <div class="row center"><i class="material-icons md-36 teal-lighten-1">face</i></div>
+                    <input placeholder="eg: yourname@tees.ac.uk" id="email" name="email" type="text" class="validate" />
+                    <label for="email"></label>
+
+                </div>
+
+
+
+
+                <div class="input-field col s6  ">
+
+                    <div class="row center"><i class="material-icons md-36 teal-lighten-1">https</i></div>
+                    <input placeholder="minimum 6 characters long" id="password" name="password" type="password" class="validate" />
+                    <label for="password"></label>
+
+                </div>
+
+            </div>
+
+            <br>
+            <div class="row center">
+                <br>
+
+
+                <h6 class="header col s12 teal-text text-lighten-1">Conditions of use: by registering with PoS, you agree that we can share your content with other third party websites and apps.
+  <br><br>Please confirm that you agree with the above statement by selecting the checkbox below.</h6>
+
+                <div class="input-field col s12 ">
+                    <input id="disclaimer" name="disclaimer" class="filled-in" type="checkbox" value="agree" />
+                    <label for="disclaimer"></label>
+                </div>
+            </div>
+
+
+
+            <br><br>
+
+            <div class="row center">
+                <div class="col s12 ">
+
+                    <button class="btn-large waves-effect waves-light teal-lighten-1 z-depth-3" type="submit" name="action">Register
+    <i class="mdi-content-send right"></i>
+  </button>
+
+                </div>
+                <!--close col-->
+            </div>
+
+            <div class="row center">
+                <br>
+                <div class="msg2 col m12 s12"></div>
+            </div>
+
+
+
+        </form>
+
+
+
+
+
+
+
+        <br><br>
+
+    </div>
+
+
+    <!--close root-->
+    </section>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+<script>
+    //Need to put the Swiper into the dynamicaly generated content!
+    //initialize swiper SPA control for this content
+    var swiper = new Swiper('.swiper-container', {
+        // If we need pagination
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        spaceBetween: 0,
+
+
+        onInit: function(swiper) {
+
+            $('.progress').css({"visibility": "hidden"});
+            $('.progressWrapper').css({"visibility": "hidden"});
+
+        },
+
+        // Add one more handler for this event
+        onSlideChangeEnd: function(swiper) {
+
+
+        },
+
+        paginationBulletRender: function(index, className) {
+            //return '<span class="' + className + '">' + (index + 1) + '</span>';
+            return '<span class="' + className + '"></span>';
+        }
+    });
+    //swiper.update();
+</script>

@@ -1,0 +1,114 @@
+<div data-hash="createRecipe" class="swiper-slide">
+
+
+
+
+
+
+    <div class="section no-pad-bot">
+
+
+
+
+
+
+
+        <h3 class="header center teal-text text-lighten-1">Create New Recipe</h3>
+        <div class="row">
+
+
+
+
+            <form id="createRecipe" class="createRecipe">
+
+
+
+                <div class="input-field col s12 ">
+                    <div class="row center"><i class="material-icons md-36 teal-text text-lighten-1">create</i></div>
+                    <input maxlength="100" placeholder="recipeName" id="recipeName" name="MAD17Recipe[name]" type="text" class="validate" tabindex="1" autofocus />
+                    <label for="recipeName"></label>
+                </div>
+
+
+
+
+                <div class="input-field col s12">
+                    <textarea id="copy" name="MAD17Recipe[copy]" class="materialize-textarea"></textarea>
+                    <label for="copy">Enter Recipe Description</label>
+                </div>
+
+
+
+
+
+                <div class="col s12">
+                    <button class="center btn-large waves-effect waves-blue z-depth-3 waves-effect teal text-lighten-1 white-text btn-flat createRecipe" type="submit">Create
+  <i class="mdi-content-send right"></i>
+</button>
+                </div>
+                <div class="input-field col s12">
+                    <span id="msg" class="red-text"></span>
+                </div>
+
+
+
+            </form>
+
+
+        </div>
+
+        <br><br>
+
+    </div>
+
+
+    <!--close root-->
+    </section>
+
+
+
+
+
+
+
+
+
+
+</div>
+<!--Close Steps Menu Group 3-->
+
+
+<script>
+    //Need to put the Swiper into the dynamicaly generated content!
+    //initialize swiper SPA control for this content
+    var swiper = new Swiper('.swiper-container', {
+        // If we need pagination
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        spaceBetween: 0,
+
+
+        onInit: function(swiper) {
+
+          $('.progress').css({"visibility": "hidden"});
+          $('.progressWrapper').css({"visibility": "hidden"});
+
+        },
+
+
+
+
+        // Add one more handler for this event
+        onSlideChangeEnd: function(swiper) {
+
+
+        },
+
+        paginationBulletRender: function(index, className) {
+            //return '<span class="' + className + '">' + (index + 1) + '</span>';
+            return '<span class="' + className + '"></span>';
+        }
+    });
+    //swiper.update();
+    //Initial animation
+</script>

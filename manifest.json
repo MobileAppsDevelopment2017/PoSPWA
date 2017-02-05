@@ -1,0 +1,26 @@
+{
+  "short_name": "PoS App",
+  "name": "MAD Demo App - PoS Recipe App App",
+  "icons": [
+    {
+      "src": "img/logosmall.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "img/android-icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "img/logosmall.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "cornflowerblue",
+  "theme_color": "cornflowerblue",
+  "orientation": "landscape"
+}
